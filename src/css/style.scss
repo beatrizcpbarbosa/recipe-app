@@ -1,0 +1,184 @@
+@import './utils', './login', './favoritos', './feitos', './search',
+ './pagReceitas', './pagExplorarPorIngredientes' ;
+
+
+.icones-btn {
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.header { 
+  width: 100%;
+  height: 50px;
+  background-color: $basecolor;
+  box-shadow: $shadow;
+  height: 50px;
+  padding-right: 10px;
+  width: 100%;
+
+  @include flex(row, space-around, center) ;
+
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+}
+
+.footer {
+  background-color: #ffc363;
+  bottom: 0;
+  box-shadow: 1px 1px 5px rgb(189, 189, 189);
+  display: flex;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  width: 100%;
+
+  @include flex(row, space-around, center) ;
+}
+
+.explore {
+
+  @include flex(column, center, center) ;
+  margin-top: 20px;
+
+  button {
+    background-color: white;
+    border-radius: $border-radius;
+    border-style: none;
+    box-shadow: $shadow;
+    height: 80px;
+    margin-bottom: 20px;
+    width: 500px;
+  }
+}
+
+.perfil {
+
+  @include flex(column, center, center) ;
+  margin-top: 50px;
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: $basecolor;
+    border-radius: $border-radius;
+    border-style: none;
+    box-shadow: $shadow;
+    height: 50px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+}
+
+.category-buttons {
+
+  @include flex(row, center, center) ;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  button {
+    background-color: $basecolor;
+    border-radius: $border-radius;
+    border-style: none;
+    box-shadow: $shadow;
+    height: 40px;
+    margin: 5px;
+    width: 150px;
+
+    &:hover {
+      background-color: $secondcolor;
+    }
+  }
+}
+
+.recipe-container {
+
+  @include flex(row, center, center) ;
+  flex-wrap: wrap;
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  height: 180px;
+  margin: 10px;
+  width: 45%;
+
+  p {
+    color: $textcolor;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
+
+.img-crop {
+  align-items: flex-start;
+  background-color: white;
+  border-radius: $border-radius;
+  display: flex;
+  flex-flow: column wrap;
+  height: 120px;
+
+  img {
+    height: 120px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.dropdown-area {
+  @include border();
+  width: 93%;
+  height: 50px;
+  margin: 20px;
+}
+
+// .favorite-card .done-card {
+//   width: 80%;
+//   height: 250px;
+//   background-color: white;
+//   margin: 0 auto;
+//   margin-top: 20px;
+//   margin-bottom: 10px;
+//   border-radius: $border-radius;
+//   box-shadow: $shadow;
+//   @include flex(row, space-around, center);
+// }
+
+// .img-card {
+//   width: 200px;
+// }
+
+// .favorite-content .done-content {
+//   @include flex(column, center, left);
+//   width: 45%;
+//   margin: 0px;
+// }
+
+// .favorite-title {
+//   width: 90px;
+//   height: 25px;
+//   padding: 0px;
+//   margin-bottom: 10px;
+//   border-style: none;
+//   background-color: $secondcolor;
+//   color: white;
+// }
+
+// .favorite-category {
+//   font-weight: bold;
+// }

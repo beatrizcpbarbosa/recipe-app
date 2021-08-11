@@ -1,0 +1,14 @@
+.footer__position {
+  align-items: center;
+  background-color: #ffc363;
+  bottom: 0;
+  box-shadow: 1px 1px 5px rgb(189, 189, 189);
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  width: 100%;
+}

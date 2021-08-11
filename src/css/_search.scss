@@ -1,0 +1,44 @@
+.search {
+
+  @include flex(column, right, center) ;
+  background-color: white;
+  box-shadow: $shadow;
+  height: 170px;
+  width: 100%;
+}
+
+.search-input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  input {
+    @include border ;
+    background-color: white;
+    min-width: 400px;
+    height: 30px;
+  }
+}
+
+.search-radio {
+  margin-bottom: 20px;
+  label {
+    margin: 10px;
+  }
+
+  input {
+
+    @include border ;
+    background-color: white;
+  }
+}
+
+.search-btn {
+
+  button {
+    background-color: $basecolor;
+    border-radius: $border-radius;
+    border-style: none;
+    height: 35px;
+    width: 150px;
+  }
+}

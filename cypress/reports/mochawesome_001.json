@@ -1,0 +1,308 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 7,
+    "passes": 0,
+    "pending": 0,
+    "failures": 7,
+    "start": "2021-06-30T20:33:20.166Z",
+    "end": "2021-06-30T20:33:41.684Z",
+    "duration": 21518,
+    "testsRegistered": 7,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f48978e4-f54f-49e4-8fce-6c00875d10bc",
+      "title": "",
+      "fullFile": "cypress/integration/explore_by_area_spec.js",
+      "file": "cypress/integration/explore_by_area_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c59f9670-2254-4ef1-8fc1-fb3ae3cd969f",
+          "title": "78 - Implemente os elementos da tela de explorar por local de origem respeitando os atributos descritos no protótipo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A tela tem os data-testids de todos os 12 cards e de todos os locais de origem",
+              "fullTitle": "78 - Implemente os elementos da tela de explorar por local de origem respeitando os atributos descritos no protótipo A tela tem os data-testids de todos os 12 cards e de todos os locais de origem",
+              "timedOut": null,
+              "duration": 3527,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"All-category-filter\"]').should('not.exist');\nmealCategoriesMock.meals.forEach(function (_ref) {\n  var category = _ref.strCategory;\n  cy.get(\"[data-testid=\\\"\".concat(category, \"-category-filter\\\"]\")).should('not.exist');\n});\ncy.get('[data-testid=\"explore-by-area-dropdown\"]');\nareasMock.meals.forEach(function (_ref2) {\n  var area = _ref2.strArea;\n  cy.get(\"[data-testid=\\\"\".concat(area, \"-option\\\"]\"));\n});\nfor (var index = 0; index < 12; index += 1) {\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-recipe-card\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\"));\n}\ncy.get('[data-testid=\"12-recipe-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Table (http://localhost:3000/static/js/main.chunk.js:335:32)\n    at renderWithHooks (http://localhost:3000/static/js/1.chunk.js:19765:22)\n    at updateFunctionComponent (http://localhost:3000/static/js/1.chunk.js:21944:24)\n    at beginWork (http://localhost:3000/static/js/1.chunk.js:23469:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:5158:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:5207:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:5260:35)\n    at beginWork$1 (http://localhost:3000/static/js/1.chunk.js:28021:11)\n    at performUnitOfWork (http://localhost:3000/static/js/1.chunk.js:26988:16)\n    at workLoopSync (http://localhost:3000/static/js/1.chunk.js:26961:26)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:26579:13)\n    at http://localhost:3000/static/js/1.chunk.js:16099:28\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:34855:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:16045:14)\n    at flushSyncCallbackQueueImpl (http://localhost:3000/static/js/1.chunk.js:16094:11)\n    at flushSyncCallbackQueue (http://localhost:3000/static/js/1.chunk.js:16082:7)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:26022:13)\n    at dispatchAction (http://localhost:3000/static/js/1.chunk.js:20602:9)\n    at getPlanets (http://localhost:3000/static/js/main.chunk.js:650:5)",
+                "diff": null
+              },
+              "uuid": "0a3778e0-e44b-4502-bff7-a3e29d2b9424",
+              "parentUUID": "c59f9670-2254-4ef1-8fc1-fb3ae3cd969f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0a3778e0-e44b-4502-bff7-a3e29d2b9424"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "6d42b9aa-a086-416f-af39-0579bb3c9708",
+          "title": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Devem ser carregadas as 12 primeiras receitas de comidas",
+              "fullTitle": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown Devem ser carregadas as 12 primeiras receitas de comidas",
+              "timedOut": null,
+              "duration": 721,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncheckFirstMeals(mealsMock.meals);",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Table (http://localhost:3000/static/js/main.chunk.js:335:32)\n    at renderWithHooks (http://localhost:3000/static/js/1.chunk.js:19765:22)\n    at updateFunctionComponent (http://localhost:3000/static/js/1.chunk.js:21944:24)\n    at beginWork (http://localhost:3000/static/js/1.chunk.js:23469:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:5158:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:5207:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:5260:35)\n    at beginWork$1 (http://localhost:3000/static/js/1.chunk.js:28021:11)\n    at performUnitOfWork (http://localhost:3000/static/js/1.chunk.js:26988:16)\n    at workLoopSync (http://localhost:3000/static/js/1.chunk.js:26961:26)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:26579:13)\n    at http://localhost:3000/static/js/1.chunk.js:16099:28\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:34855:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:16045:14)\n    at flushSyncCallbackQueueImpl (http://localhost:3000/static/js/1.chunk.js:16094:11)\n    at flushSyncCallbackQueue (http://localhost:3000/static/js/1.chunk.js:16082:7)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:26022:13)\n    at dispatchAction (http://localhost:3000/static/js/1.chunk.js:20602:9)\n    at getPlanets (http://localhost:3000/static/js/main.chunk.js:650:5)",
+                "diff": null
+              },
+              "uuid": "8d967739-202b-45a7-b748-4ed4254366ea",
+              "parentUUID": "6d42b9aa-a086-416f-af39-0579bb3c9708",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API",
+              "fullTitle": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API",
+              "timedOut": null,
+              "duration": 678,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('Japanese');\ncheckFirstMeals(japaneseMealsMock.meals, 5);\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('Italian');\ncheckFirstMeals(italianMealsMock.meals);",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Table (http://localhost:3000/static/js/main.chunk.js:335:32)\n    at renderWithHooks (http://localhost:3000/static/js/1.chunk.js:19765:22)\n    at updateFunctionComponent (http://localhost:3000/static/js/1.chunk.js:21944:24)\n    at beginWork (http://localhost:3000/static/js/1.chunk.js:23469:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:5158:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:5207:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:5260:35)\n    at beginWork$1 (http://localhost:3000/static/js/1.chunk.js:28021:11)\n    at performUnitOfWork (http://localhost:3000/static/js/1.chunk.js:26988:16)\n    at workLoopSync (http://localhost:3000/static/js/1.chunk.js:26961:26)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:26579:13)\n    at http://localhost:3000/static/js/1.chunk.js:16099:28\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:34855:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:16045:14)\n    at flushSyncCallbackQueueImpl (http://localhost:3000/static/js/1.chunk.js:16094:11)\n    at flushSyncCallbackQueue (http://localhost:3000/static/js/1.chunk.js:16082:7)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:26022:13)\n    at dispatchAction (http://localhost:3000/static/js/1.chunk.js:20602:9)\n    at getPlanets (http://localhost:3000/static/js/main.chunk.js:650:5)",
+                "diff": null
+              },
+              "uuid": "95b92764-8aaa-42b7-9a18-c3218594dc83",
+              "parentUUID": "6d42b9aa-a086-416f-af39-0579bb3c9708",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL",
+              "fullTitle": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL",
+              "timedOut": null,
+              "duration": 857,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"0-recipe-card\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52977');\n});",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Table (http://localhost:3000/static/js/main.chunk.js:335:32)\n    at renderWithHooks (http://localhost:3000/static/js/1.chunk.js:19765:22)\n    at updateFunctionComponent (http://localhost:3000/static/js/1.chunk.js:21944:24)\n    at beginWork (http://localhost:3000/static/js/1.chunk.js:23469:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:5158:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:5207:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:5260:35)\n    at beginWork$1 (http://localhost:3000/static/js/1.chunk.js:28021:11)\n    at performUnitOfWork (http://localhost:3000/static/js/1.chunk.js:26988:16)\n    at workLoopSync (http://localhost:3000/static/js/1.chunk.js:26961:26)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:26579:13)\n    at http://localhost:3000/static/js/1.chunk.js:16099:28\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:34855:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:16045:14)\n    at flushSyncCallbackQueueImpl (http://localhost:3000/static/js/1.chunk.js:16094:11)\n    at flushSyncCallbackQueue (http://localhost:3000/static/js/1.chunk.js:16082:7)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:26022:13)\n    at dispatchAction (http://localhost:3000/static/js/1.chunk.js:20602:9)\n    at getPlanets (http://localhost:3000/static/js/main.chunk.js:650:5)",
+                "diff": null
+              },
+              "uuid": "45165135-81d7-4323-b1f2-d0a552195821",
+              "parentUUID": "6d42b9aa-a086-416f-af39-0579bb3c9708",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8d967739-202b-45a7-b748-4ed4254366ea",
+            "95b92764-8aaa-42b7-9a18-c3218594dc83",
+            "45165135-81d7-4323-b1f2-d0a552195821"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2256,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "37ec299d-9423-4422-b32a-2956a7412353",
+          "title": "80 - Implemente o dropdown de maneira que devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\", que retorna as receitas sem nenhum filtro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\"",
+              "fullTitle": "80 - Implemente o dropdown de maneira que devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\", que retorna as receitas sem nenhum filtro No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\"",
+              "timedOut": null,
+              "duration": 906,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"All-option\"]').contains('All');\nareasMock.meals.forEach(function (_ref3) {\n  var area = _ref3.strArea;\n  cy.get(\"[data-testid=\\\"\".concat(area, \"-option\\\"]\")).contains(area);\n});",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Table (http://localhost:3000/static/js/main.chunk.js:335:32)\n    at renderWithHooks (http://localhost:3000/static/js/1.chunk.js:19765:22)\n    at updateFunctionComponent (http://localhost:3000/static/js/1.chunk.js:21944:24)\n    at beginWork (http://localhost:3000/static/js/1.chunk.js:23469:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:5158:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:5207:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:5260:35)\n    at beginWork$1 (http://localhost:3000/static/js/1.chunk.js:28021:11)\n    at performUnitOfWork (http://localhost:3000/static/js/1.chunk.js:26988:16)\n    at workLoopSync (http://localhost:3000/static/js/1.chunk.js:26961:26)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:26579:13)\n    at http://localhost:3000/static/js/1.chunk.js:16099:28\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:34855:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:16045:14)\n    at flushSyncCallbackQueueImpl (http://localhost:3000/static/js/1.chunk.js:16094:11)\n    at flushSyncCallbackQueue (http://localhost:3000/static/js/1.chunk.js:16082:7)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:26022:13)\n    at dispatchAction (http://localhost:3000/static/js/1.chunk.js:20602:9)\n    at getPlanets (http://localhost:3000/static/js/main.chunk.js:650:5)",
+                "diff": null
+              },
+              "uuid": "ab8e9d6c-69c5-4f71-925d-f6af010a6bdb",
+              "parentUUID": "37ec299d-9423-4422-b32a-2956a7412353",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A opção \"All\" retorna as receitas sem nenhum filtro",
+              "fullTitle": "80 - Implemente o dropdown de maneira que devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\", que retorna as receitas sem nenhum filtro A opção \"All\" retorna as receitas sem nenhum filtro",
+              "timedOut": null,
+              "duration": 675,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('Japanese');\ncheckFirstMeals(japaneseMealsMock.meals, 5);\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('All');\ncheckFirstMeals(mealsMock.meals);",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'filter' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at Table (http://localhost:3000/static/js/main.chunk.js:335:32)\n    at renderWithHooks (http://localhost:3000/static/js/1.chunk.js:19765:22)\n    at updateFunctionComponent (http://localhost:3000/static/js/1.chunk.js:21944:24)\n    at beginWork (http://localhost:3000/static/js/1.chunk.js:23469:20)\n    at HTMLUnknownElement.callCallback (http://localhost:3000/static/js/1.chunk.js:5158:18)\n    at Object.invokeGuardedCallbackDev (http://localhost:3000/static/js/1.chunk.js:5207:20)\n    at invokeGuardedCallback (http://localhost:3000/static/js/1.chunk.js:5260:35)\n    at beginWork$1 (http://localhost:3000/static/js/1.chunk.js:28021:11)\n    at performUnitOfWork (http://localhost:3000/static/js/1.chunk.js:26988:16)\n    at workLoopSync (http://localhost:3000/static/js/1.chunk.js:26961:26)\n    at performSyncWorkOnRoot (http://localhost:3000/static/js/1.chunk.js:26579:13)\n    at http://localhost:3000/static/js/1.chunk.js:16099:28\n    at unstable_runWithPriority (http://localhost:3000/static/js/1.chunk.js:34855:16)\n    at runWithPriority$1 (http://localhost:3000/static/js/1.chunk.js:16045:14)\n    at flushSyncCallbackQueueImpl (http://localhost:3000/static/js/1.chunk.js:16094:11)\n    at flushSyncCallbackQueue (http://localhost:3000/static/js/1.chunk.js:16082:7)\n    at scheduleUpdateOnFiber (http://localhost:3000/static/js/1.chunk.js:26022:13)\n    at dispatchAction (http://localhost:3000/static/js/1.chunk.js:20602:9)\n    at getPlanets (http://localhost:3000/static/js/main.chunk.js:650:5)",
+                "diff": null
+              },
+              "uuid": "670b3500-5d3a-4b10-965e-89632a47b206",
+              "parentUUID": "37ec299d-9423-4422-b32a-2956a7412353",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ab8e9d6c-69c5-4f71-925d-f6af010a6bdb",
+            "670b3500-5d3a-4b10-965e-89632a47b206"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c410c261-1327-4c71-bbb5-a45cef63996e",
+          "title": "81 - Implemente a rota que deve ser apenas `/explorar/comidas/area`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ao acessar a rota ela retorna um erro de \"Not Found\"",
+              "fullTitle": "81 - Implemente a rota que deve ser apenas `/explorar/comidas/area` Ao acessar a rota ela retorna um erro de \"Not Found\"",
+              "timedOut": null,
+              "duration": 11130,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas/area');\ncy.contains('Not Found');",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find content: 'Not Found' but never did.",
+                "estack": "CypressError: Timed out retrying: Expected to find content: 'Not Found' but never did.\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "d02c995f-4401-44d8-8cc7-5190ce098188",
+              "parentUUID": "c410c261-1327-4c71-bbb5-a45cef63996e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d02c995f-4401-44d8-8cc7-5190ce098188"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11130,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

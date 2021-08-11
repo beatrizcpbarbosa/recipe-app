@@ -1,0 +1,11 @@
+.recipe-start-button {
+  bottom: 0;
+}
+
+.recipe-start-button-show {
+  visibility: visible;
+}
+
+.recipe-start-button-hidden {
+  visibility: hidden;
+}

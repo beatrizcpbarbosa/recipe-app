@@ -14,6 +14,12 @@ A recipe app where you can browse different recipes, bookmark to read informatio
 - API Request
 - Assync and Promises
 
+### Group Project
+[Rafael Medeiros Gomes](https://github.com/RafaelMedeirosGomes)
+[Beatriz Zidioti](https://github.com/biazidioti) 
+[Luiz Vaccari](https://github.com/LuizVaccari)
+[Beatriz Barbosa](https://github.com/beatrizcpbarbosa) 
+
 
 ### How to run the project
 - Download the project
